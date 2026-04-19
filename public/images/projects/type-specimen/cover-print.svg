@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#faf5eb"/>
+  <rect x="400" y="80" width="800" height="760" rx="4" fill="#fafaf9" stroke="#e7e5e4"/>
+  <text x="480" y="340" font-family="Georgia" font-size="160" fill="#1c1917" font-weight="700">Kk</text>
+  <text x="484" y="344" font-family="Georgia" font-size="160" fill="#e63946" font-weight="700" opacity="0.4">Kk</text>
+  <text x="800" y="660" font-family="system-ui" font-size="18" fill="#78716c" text-anchor="middle">Risograph Print — Two Colour</text>
+  <text x="800" y="690" font-family="system-ui" font-size="14" fill="#a8a29e" text-anchor="middle">Black + Red · Intentional Misregistration</text>
+</svg>

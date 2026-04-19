@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1c1917"/>
+  <text x="80" y="200" font-family="Georgia" font-size="140" fill="#fafaf9" opacity="0.9" font-weight="700">Aa</text>
+  <text x="400" y="320" font-family="Georgia" font-size="80" fill="#e63946" opacity="0.85" font-weight="700">Bb</text>
+  <text x="400" y="430" font-family="system-ui" font-size="18" fill="#a8a29e" text-anchor="middle">Kinetic Type Specimen · 2024</text>
+</svg>

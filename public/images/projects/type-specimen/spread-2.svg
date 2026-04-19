@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#fafaf9"/>
+  <line x1="800" y1="0" x2="800" y2="1000" stroke="#e7e5e4" stroke-width="1"/>
+  <text x="60" y="280" font-family="Georgia" font-size="200" fill="#1c1917" opacity="0.08" font-weight="700">Rhythm</text>
+  <text x="80" y="420" font-family="Georgia" font-size="96" fill="#1c1917" font-weight="700">Rhy</text>
+  <text x="840" y="560" font-family="Georgia" font-size="96" fill="#e63946" font-weight="700">thm</text>
+  <text x="800" y="780" font-family="system-ui" font-size="16" fill="#a8a29e" text-anchor="middle" letter-spacing="0.2em">SPREAD 02 — RHYTHM</text>
+</svg>

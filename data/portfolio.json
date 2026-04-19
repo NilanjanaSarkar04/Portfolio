@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "title": "Nilanjana | Design Portfolio",
+    "description": "Portfolio of Nilanjana — a design student specializing in UI/UX, branding, and visual communication.",
+    "url": "https://nilanjana.design"
+  },
+  "profile": {
+    "name": "Nilanjana",
+    "tagline": "Design Student & Visual Storyteller",
+    "bio": "I'm a design student passionate about creating meaningful visual experiences that sit at the intersection of aesthetics and function. My work spans UI/UX design, brand identity, and visual communication — driven by a belief that great design should feel effortless.\n\nI'm currently pursuing my degree in Communication Design, where I've developed a strong foundation in design thinking, typography, and human-centered design. I'm always exploring new ways to push creative boundaries while keeping the user at the center of every decision.",
+    "profileImage": "/images/profile/headshot.svg",
+    "email": "hello@nilanjana.design",
+    "location": "New Delhi, India",
+    "resumeUrl": "/resume.pdf",
+    "socialLinks": [
+      {
+        "platform": "linkedin",
+        "url": "https://linkedin.com/in/nilanjana",
+        "label": "LinkedIn"
+      },
+      {
+        "platform": "behance",
+        "url": "https://behance.net/nilanjana",
+        "label": "Behance"
+      },
+      {
+        "platform": "instagram",
+        "url": "https://instagram.com/nilanjana.design",
+        "label": "Instagram"
+      }
+    ],
+    "education": [
+      {
+        "institution": "National Institute of Design",
+        "degree": "Bachelor of Design",
+        "field": "Communication Design",
+        "startYear": "2022",
+        "endYear": "2026",
+        "description": "Focused on typography, visual systems, UI/UX, and motion design. Participated in national design competitions and cross-disciplinary studios."
+      }
+    ]
+  },
+  "projects": [
+    {
+      "slug": "bloom-app",
+      "title": "Bloom — Wellness App",
+      "shortDescription": "A mental wellness app designed to help users build mindfulness habits through gentle daily rituals and mood tracking.",
+      "description": "Bloom is a mobile wellness application designed to reduce the friction between intention and habit. The core insight was that most wellness apps overwhelm users with features — Bloom takes the opposite approach, offering just three daily rituals: a morning check-in, a midday breath, and an evening reflection.\n\nThe design process began with desk research and interviews with 12 users who had tried and abandoned wellness apps. The primary reason for drop-off was guilt — users felt bad when they missed days. Bloom reframes this with a 'streak-free' philosophy where consistency is celebrated without punishing gaps.\n\nThe visual language draws from botanical illustration — organic shapes, a muted earth palette, and fluid animations that feel alive without being distracting.",
+      "thumbnail": "/images/projects/bloom-app/thumbnail.svg",
+      "coverImage": "/images/projects/bloom-app/cover.svg",
+      "images": [
+        {
+          "src": "/images/projects/bloom-app/onboarding.svg",
+          "alt": "Onboarding flow screens",
+          "caption": "A gentle 3-step onboarding that sets intention without overwhelming"
+        },
+        {
+          "src": "/images/projects/bloom-app/home.svg",
+          "alt": "Home screen with daily rituals",
+          "caption": "The home screen surfaces only what matters today"
+        },
+        {
+          "src": "/images/projects/bloom-app/mood.svg",
+          "alt": "Mood tracking interface",
+          "caption": "Mood check-in uses expressive illustration instead of numeric scales"
+        }
+      ],
+      "tags": ["Figma", "UI/UX", "Mobile Design", "User Research", "Prototyping"],
+      "category": "UI/UX Design",
+      "year": "2025",
+      "featured": true
+    },
+    {
+      "slug": "terracycle-brand",
+      "title": "TerraCycle — Brand Identity",
+      "shortDescription": "A brand identity system for a sustainable packaging startup, built around the concept of circular material flows.",
+      "description": "TerraCycle is a B2B sustainable packaging startup that needed a brand identity to match its mission: making packaging circular. The challenge was communicating both the scientific rigour of their material science and the optimism of their environmental mission.\n\nThe identity system is built on the concept of the loop — not just as a metaphor for recycling, but as a visual generative system. The logomark is constructed from two interlocking arcs that can be used to build patterns, dividers, and decorative elements across all touchpoints.\n\nThe color palette pairs a deep forest green with warm off-white and terracotta, referencing both the natural world and the earthy quality of recycled materials. Typography pairs a geometric sans (for modernity) with a humanist serif (for warmth and trust).",
+      "thumbnail": "/images/projects/terracycle-brand/thumbnail.svg",
+      "coverImage": "/images/projects/terracycle-brand/cover.svg",
+      "images": [
+        {
+          "src": "/images/projects/terracycle-brand/logo-system.svg",
+          "alt": "Logo and symbol system",
+          "caption": "The logomark and its construction grid"
+        },
+        {
+          "src": "/images/projects/terracycle-brand/colors-type.svg",
+          "alt": "Color palette and typography",
+          "caption": "Brand palette and type pairing"
+        },
+        {
+          "src": "/images/projects/terracycle-brand/mockups.svg",
+          "alt": "Brand in use — packaging and stationery",
+          "caption": "Identity applied to packaging and print"
+        }
+      ],
+      "tags": ["Brand Identity", "Illustrator", "Logo Design", "Typography", "Visual Systems"],
+      "category": "Branding",
+      "year": "2024",
+      "featured": true
+    },
+    {
+      "slug": "type-specimen",
+      "title": "Kinetic Type Specimen",
+      "shortDescription": "An editorial type specimen for a display typeface, exploring the relationship between motion and letterform.",
+      "description": "This project was a self-initiated exploration into type specimen design — specifically, how a static specimen can evoke the feeling of motion when designing for a typeface that was originally created for kinetic contexts like film titles and broadcast graphics.\n\nThe specimen doubles as an editorial piece: each spread is designed around a specific personality attribute of the typeface (tension, rhythm, weight, contrast). The layout breaks conventional grid rules deliberately — the typeface demands it.\n\nPrinted in two-color risograph (black + a warm red), with a deliberately imperfect registration that reinforces the raw, kinetic energy of the face.",
+      "thumbnail": "/images/projects/type-specimen/thumbnail.svg",
+      "coverImage": "/images/projects/type-specimen/cover.svg",
+      "images": [
+        {
+          "src": "/images/projects/type-specimen/spread-1.svg",
+          "alt": "Opening spread — tension",
+          "caption": "The opening spread explores the theme of tension"
+        },
+        {
+          "src": "/images/projects/type-specimen/spread-2.svg",
+          "alt": "Rhythm spread",
+          "caption": "Typographic rhythm across a two-page spread"
+        },
+        {
+          "src": "/images/projects/type-specimen/cover-print.svg",
+          "alt": "Printed cover with risograph texture",
+          "caption": "Two-color risograph print with intentional misregistration"
+        }
+      ],
+      "tags": ["InDesign", "Typography", "Editorial", "Print Design", "Risograph"],
+      "category": "Editorial Design",
+      "year": "2024",
+      "featured": true
+    }
+  ]
+}

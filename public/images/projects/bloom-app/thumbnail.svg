@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#d8f5e4"/>
+  <circle cx="400" cy="260" r="100" fill="#86efac" opacity="0.6"/>
+  <circle cx="400" cy="260" r="60" fill="#4ade80" opacity="0.7"/>
+  <text x="400" y="400" font-family="system-ui" font-size="24" fill="#166534" text-anchor="middle" font-weight="500">Bloom — Wellness App</text>
+  <text x="400" y="432" font-family="system-ui" font-size="14" fill="#166534" opacity="0.6" text-anchor="middle">UI/UX Design · 2025</text>
+</svg>

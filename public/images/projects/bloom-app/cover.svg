@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#d8f5e4"/>
+  <circle cx="800" cy="400" r="200" fill="#86efac" opacity="0.4"/>
+  <circle cx="800" cy="400" r="120" fill="#4ade80" opacity="0.5"/>
+  <circle cx="800" cy="400" r="60" fill="#16a34a" opacity="0.6"/>
+  <text x="800" y="630" font-family="system-ui" font-size="32" fill="#166534" text-anchor="middle" font-weight="500">Bloom — Wellness App</text>
+  <text x="800" y="672" font-family="system-ui" font-size="18" fill="#166534" opacity="0.6" text-anchor="middle">Cover Image</text>
+</svg>

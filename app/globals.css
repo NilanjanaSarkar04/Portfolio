@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
+/* ── Light mode (default) ─────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background:    #faf8f5;
+  --surface:       #f0ece6;
+  --surface-hover: #e8e2da;
+  --foreground:    #0d0c0b;
+  --accent:        #c44b32;
+  --accent-hover:  #d4654e;
+  --muted:         #78716c;
+  --border:        #e2ddd8;
+  --tag-bg:        #ede8e2;
+  --tag-text:      #57534e;
+  --hero-gradient:
+    radial-gradient(ellipse 60% 70% at 8% 60%, rgba(196, 75, 50, 0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 60% at 92% 15%, rgba(196, 75, 50, 0.04) 0%, transparent 60%);
+}
+
+/* ── Dark mode ────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background:    #0d0c0b;
+    --surface:       #161412;
+    --surface-hover: #1f1d1a;
+    --foreground:    #f0ece6;
+    --accent:        #d4654e;
+    --accent-hover:  #e07560;
+    --muted:         #6b6560;
+    --border:        #252220;
+    --tag-bg:        #1f1d1a;
+    --tag-text:      #a09890;
+    --hero-gradient:
+      radial-gradient(ellipse 60% 70% at 8% 60%, rgba(212, 101, 78, 0.10) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 60% at 92% 15%, rgba(212, 101, 78, 0.06) 0%, transparent 60%);
+  }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background:    var(--background);
+  --color-surface:       var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-foreground:    var(--foreground);
+  --color-accent:        var(--accent);
+  --color-accent-hover:  var(--accent-hover);
+  --color-muted:         var(--muted);
+  --color-border:        var(--border);
+  --color-tag-bg:        var(--tag-bg);
+  --color-tag-text:      var(--tag-text);
+  --font-sans:  var(--font-geist-sans);
+  --font-mono:  var(--font-geist-mono);
+  --animate-fade-up:  fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in:  fade-in 0.5s ease-out both;
+  --animate-marquee:  marquee-scroll 35s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 120px 120px;
 }

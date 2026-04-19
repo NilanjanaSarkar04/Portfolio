@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#14532d"/>
+  <path d="M400 180 Q480 260 400 340 Q320 260 400 180Z" fill="#86efac" opacity="0.7"/>
+  <path d="M400 220 Q460 280 400 340 Q340 280 400 220Z" fill="#f5f5f0" opacity="0.9"/>
+  <text x="400" y="420" font-family="system-ui" font-size="24" fill="#f5f5f0" text-anchor="middle" font-weight="500">TerraCycle</text>
+  <text x="400" y="452" font-family="system-ui" font-size="14" fill="#86efac" text-anchor="middle">Brand Identity · 2024</text>
+</svg>
