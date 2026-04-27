@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Hero name={profile.name} tagline={profile.tagline} bio={profile.bio} />
       <Marquee />
-      <section id="work" className="max-w-5xl mx-auto px-6 py-24">
+      <section id="work" className="max-w-5xl mx-auto px-5 sm:px-6 py-14 sm:py-24">
         <SectionHeading
           title="Selected Work"
           subtitle={`${projects.length} projects across design disciplines`}

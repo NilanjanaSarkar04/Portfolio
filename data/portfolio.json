@@ -31,101 +31,341 @@
     ],
     "education": [
       {
-        "institution": "National Institute of Design",
-        "degree": "Bachelor of Design",
-        "field": "Communication Design",
-        "startYear": "2022",
-        "endYear": "2026",
-        "description": "Focused on typography, visual systems, UI/UX, and motion design. Participated in national design competitions and cross-disciplinary studios."
+        "institution": "National Institute of Fashion Technology",
+        "degree": "Master of Design",
+        "field": "Design",
+        "startYear": "2025",
+        "endYear": "2027",
+        "description": ""
+      },
+      {
+        "institution": "English and Foreign Languages University",
+        "degree": "Master of Arts",
+        "field": "English Literature",
+        "startYear": "2020",
+        "endYear": "2022",
+        "description": ""
+      },
+      {
+        "institution": "Banaras Hindu University",
+        "degree": "Bachelor of Arts",
+        "field": "English Honours",
+        "startYear": "2017",
+        "endYear": "2020",
+        "description": ""
       }
     ]
   },
   "projects": [
     {
-      "slug": "bloom-app",
-      "title": "Bloom — Wellness App",
-      "shortDescription": "A mental wellness app designed to help users build mindfulness habits through gentle daily rituals and mood tracking.",
-      "description": "Bloom is a mobile wellness application designed to reduce the friction between intention and habit. The core insight was that most wellness apps overwhelm users with features — Bloom takes the opposite approach, offering just three daily rituals: a morning check-in, a midday breath, and an evening reflection.\n\nThe design process began with desk research and interviews with 12 users who had tried and abandoned wellness apps. The primary reason for drop-off was guilt — users felt bad when they missed days. Bloom reframes this with a 'streak-free' philosophy where consistency is celebrated without punishing gaps.\n\nThe visual language draws from botanical illustration — organic shapes, a muted earth palette, and fluid animations that feel alive without being distracting.",
-      "thumbnail": "/images/projects/bloom-app/thumbnail.svg",
-      "coverImage": "/images/projects/bloom-app/cover.svg",
+      "slug": "habitica-redesign",
+      "title": "Habitica App Redesign",
+      "shortDescription": "A UX redesign of Habitica — an RPG-style habit tracker — addressing onboarding friction, interaction overload, and punishing game mechanics.",
+      "description": "Habitica turns habit-building into a role-playing game, but its dense mechanics create significant barriers for new users. This project began with a structured gap analysis across four dimensions: confusing onboarding that assumed RPG familiarity, interaction friction from unintuitive task completion flows, a broken reward loop where pixelated art and Gold spending felt meaningless, and shallow long-term progression that led to drop-off.\n\nThe redesign strategy was grounded in James Clear's habit framework — make it Obvious, Attractive, Easy, and Satisfying. The existing information architecture was mapped in full before a leaner redesigned version was proposed, removing redundant nodes and clarifying the separation between Habits, Dailies, and To-Dos.\n\nNew wireframes were produced for core screens — Dailies, Habits, Trophy Room, Character Creation — followed by a redesigned user flow from login through tutorial to the gameplay loop. A 5-step tutorial screen guides new users progressively. The revised colour scheme replaces high-saturation purple with Lavender Grey (calm, focus) and Dark Ash (contrast), and new screens for Leaderboard, Terrain Choice, Side Menu, and Campfire round out the redesigned experience.",
+      "thumbnail": "/Habitica/1.png",
+      "coverImage": "/Habitica/1.png",
       "images": [
         {
-          "src": "/images/projects/bloom-app/onboarding.svg",
-          "alt": "Onboarding flow screens",
-          "caption": "A gentle 3-step onboarding that sets intention without overwhelming"
+          "src": "/Habitica/2.png",
+          "alt": "Habitica app overview — Habits, Dailies, To-Dos explained",
+          "caption": "Understanding the app: Habits, Dailies, To-Dos, and the core RPG mechanics"
         },
         {
-          "src": "/images/projects/bloom-app/home.svg",
-          "alt": "Home screen with daily rituals",
-          "caption": "The home screen surfaces only what matters today"
+          "src": "/Habitica/6.png",
+          "alt": "Gap identification — onboarding and first-time user experience",
+          "caption": "Gap 1: Unclear onboarding forces new users to learn RPG concepts independently"
         },
         {
-          "src": "/images/projects/bloom-app/mood.svg",
-          "alt": "Mood tracking interface",
-          "caption": "Mood check-in uses expressive illustration instead of numeric scales"
+          "src": "/Habitica/7.png",
+          "alt": "Gap — usability and interaction friction",
+          "caption": "Gap 2: Unintuitive task flows and static character art reduce engagement"
+        },
+        {
+          "src": "/Habitica/8.png",
+          "alt": "Gap — feedback, rewards, and visual payoff",
+          "caption": "Gap 3: Pixelated rewards and broken Gold motivation loop weaken the feedback cycle"
+        },
+        {
+          "src": "/Habitica/9.png",
+          "alt": "Gap — progression and long-term retention",
+          "caption": "Gap 4: Repetitive customisation and shallow RPG depth cause long-term drop-off"
+        },
+        {
+          "src": "/Habitica/10.png",
+          "alt": "Existing features information architecture",
+          "caption": "Current IA: sprawling structure across Tasks, Avatar, Party, Quests, and Menu"
+        },
+        {
+          "src": "/Habitica/14.png",
+          "alt": "Redesign strategies — habit loop framework",
+          "caption": "Redesign strategy: Obvious → Attractive → Easy → Satisfying (James Clear's habit loop)"
+        },
+        {
+          "src": "/Habitica/21.png",
+          "alt": "Redesigned features information architecture",
+          "caption": "Redesigned IA: streamlined to four top-level sections with cleaner sub-navigation"
+        },
+        {
+          "src": "/Habitica/22.png",
+          "alt": "Redesigned gameplay user flow",
+          "caption": "New user flow: from login through character creation to the core dailies loop"
+        },
+        {
+          "src": "/Habitica/23.png",
+          "alt": "Wireframes — Dailies, Habits, Trophy Room, Character Creation",
+          "caption": "Wireframing core screens with a simplified bottom nav and consistent layout grid"
+        },
+        {
+          "src": "/Habitica/24.png",
+          "alt": "Tutorial screen — 5-step onboarding walkthrough",
+          "caption": "Progressive tutorial: contextual tooltips introduce mechanics one step at a time"
+        },
+        {
+          "src": "/Habitica/25.png",
+          "alt": "New screens — Leaderboard, Terrain, Side Menu, Campfire",
+          "caption": "Redesigned feature screens adding social, customisation, and pause-state contexts"
+        },
+        {
+          "src": "/Habitica/26.png",
+          "alt": "Revised colour scheme — Lavender Grey and Dark Ash",
+          "caption": "New palette: Lavender Grey for calm daily use, Dark Ash for contrast and depth"
         }
       ],
-      "tags": ["Figma", "UI/UX", "Mobile Design", "User Research", "Prototyping"],
+      "tags": ["Figma", "UI/UX", "Mobile Design", "User Research", "Information Architecture", "Wireframing"],
       "category": "UI/UX Design",
       "year": "2025",
       "featured": true
     },
     {
-      "slug": "terracycle-brand",
-      "title": "TerraCycle — Brand Identity",
-      "shortDescription": "A brand identity system for a sustainable packaging startup, built around the concept of circular material flows.",
-      "description": "TerraCycle is a B2B sustainable packaging startup that needed a brand identity to match its mission: making packaging circular. The challenge was communicating both the scientific rigour of their material science and the optimism of their environmental mission.\n\nThe identity system is built on the concept of the loop — not just as a metaphor for recycling, but as a visual generative system. The logomark is constructed from two interlocking arcs that can be used to build patterns, dividers, and decorative elements across all touchpoints.\n\nThe color palette pairs a deep forest green with warm off-white and terracotta, referencing both the natural world and the earthy quality of recycled materials. Typography pairs a geometric sans (for modernity) with a humanist serif (for warmth and trust).",
-      "thumbnail": "/images/projects/terracycle-brand/thumbnail.svg",
-      "coverImage": "/images/projects/terracycle-brand/cover.svg",
+      "slug": "delhi-tourism-pamphlet",
+      "title": "Delhi Tourism Pamphlet",
+      "shortDescription": "A print pamphlet for Delhi Tourism spotlighting Qutub Minar, blending traditional Indian visual motifs with clear, visitor-friendly information design.",
+      "description": "This project was a print design brief to create a tourism pamphlet promoting Delhi — with Qutub Minar as its hero landmark. The challenge was balancing rich cultural storytelling with practical visitor information across a multi-panel foldout that people would actually read on location.\n\nThe visual language draws on traditional Indian decorative motifs — lotus patterns, geometric borders, and architectural line illustration — rendered in a warm saffron and deep crimson palette echoing Mughal-era craftsmanship. The cover pairs bold typography with the iconic monument illustration to command attention on a display rack.\n\nThe interior spreads cover everything a visitor needs: monument facts and history, the evening light show schedule, transport options from Indira Gandhi International Airport and Delhi Metro, accommodation categories, a full Delhi itinerary spanning Chandni Chowk, Red Fort, India Gate, Lotus Temple, Qutub Minar, Humayun's Tomb, Lodhi Garden, and Jantar Mantar, plus curated shopping destinations (Dilli Haat, Janpath Market) and dining areas. Contact details and a QR code link to the Delhi Tourism app.",
+      "thumbnail": "/Pamphlet/1.png",
+      "coverImage": "/Pamphlet/1.png",
       "images": [
         {
-          "src": "/images/projects/terracycle-brand/logo-system.svg",
-          "alt": "Logo and symbol system",
-          "caption": "The logomark and its construction grid"
+          "src": "/Pamphlet/2.png",
+          "alt": "Feature spread — Qutub Minar with contact and booking details",
+          "caption": "Hero spread: bold typographic prompt with monument photography and booking CTA"
         },
         {
-          "src": "/images/projects/terracycle-brand/colors-type.svg",
-          "alt": "Color palette and typography",
-          "caption": "Brand palette and type pairing"
+          "src": "/Pamphlet/3.png",
+          "alt": "About the Monument, Schedule, and Also Visit",
+          "caption": "Monument history, light show timings, and nearby attractions in a two-column grid"
         },
         {
-          "src": "/images/projects/terracycle-brand/mockups.svg",
-          "alt": "Brand in use — packaging and stationery",
-          "caption": "Identity applied to packaging and print"
+          "src": "/Pamphlet/4.png",
+          "alt": "Things to Know, How to Get Around, Where to Stay, Welcome to Delhi",
+          "caption": "Practical visitor information: language, transport options, accommodation guide"
+        },
+        {
+          "src": "/Pamphlet/5.png",
+          "alt": "Full Delhi itinerary, Where to Shop, Where to Eat",
+          "caption": "Complete Delhi guide: landmark itinerary, shopping destinations, and dining areas"
         }
       ],
-      "tags": ["Brand Identity", "Illustrator", "Logo Design", "Typography", "Visual Systems"],
-      "category": "Branding",
+      "tags": ["Illustrator", "InDesign", "Print Design", "Typography", "Graphic Design", "Editorial"],
+      "category": "Print Design",
       "year": "2024",
       "featured": true
     },
     {
-      "slug": "type-specimen",
-      "title": "Kinetic Type Specimen",
-      "shortDescription": "An editorial type specimen for a display typeface, exploring the relationship between motion and letterform.",
-      "description": "This project was a self-initiated exploration into type specimen design — specifically, how a static specimen can evoke the feeling of motion when designing for a typeface that was originally created for kinetic contexts like film titles and broadcast graphics.\n\nThe specimen doubles as an editorial piece: each spread is designed around a specific personality attribute of the typeface (tension, rhythm, weight, contrast). The layout breaks conventional grid rules deliberately — the typeface demands it.\n\nPrinted in two-color risograph (black + a warm red), with a deliberately imperfect registration that reinforces the raw, kinetic energy of the face.",
-      "thumbnail": "/images/projects/type-specimen/thumbnail.svg",
-      "coverImage": "/images/projects/type-specimen/cover.svg",
+      "slug": "neemans-domain-study",
+      "title": "Neeman's — Domain Study",
+      "shortDescription": "A brand and market study of Neeman's, India's first Merino Wool footwear brand, examining its D2C strategy, digital gaps, and rapid offline expansion.",
+      "description": "Neeman's is a Hyderabad-based D2C footwear brand founded in 2018 around a single idea: one shoe for every occasion, made from Merino Wool and recycled PET. This domain study examined how a sustainability-first brand built a loyal customer base — and where the gaps lie.\n\nThe research mapped the brand's digital core (1.42M monthly visits, 39.6% aged 25–34, GoKwik-powered conversion optimisation, 4.4K organic keywords) against two identified gaps: a men-centric product range in a female-dominated market (women hold 54.36% of Indian footwear market share), and social media traffic disproportionately driven by Facebook despite an Instagram-native audience. Strategy recommendations addressed both: women-specific silhouettes with premium textures, a WFORWOMEN collaboration concept, and a lifestyle content pivot centred on \"Day in Life with Neeman's\".\n\nThe study also analysed the viral micro-influencer campaign \"Are Those Neeman's Shoes?\" — a guerrilla phone-algorithm hack that drove organic traffic spikes during IPL — and proposed a poster concept linking the brand's recycled PET bottles to the Genie-in-a-lamp story. The section closes with a new logo design proposal for retail and Instagram contexts.",
+      "thumbnail": "/Neeman's/1.png",
+      "coverImage": "/Neeman's/1.png",
       "images": [
         {
-          "src": "/images/projects/type-specimen/spread-1.svg",
-          "alt": "Opening spread — tension",
-          "caption": "The opening spread explores the theme of tension"
+          "src": "/Neeman's/8.png",
+          "alt": "Brand overview — Neeman's origin and philosophy",
+          "caption": "Origin story: a travel packing problem solved with Merino Wool and a family name"
         },
         {
-          "src": "/images/projects/type-specimen/spread-2.svg",
-          "alt": "Rhythm spread",
-          "caption": "Typographic rhythm across a two-page spread"
+          "src": "/Neeman's/10.png",
+          "alt": "Core philosophy and founders",
+          "caption": "Founders Amar Preet Singh and Taran Singh Chabra on their 'one shoe for everything' mission"
         },
         {
-          "src": "/images/projects/type-specimen/cover-print.svg",
-          "alt": "Printed cover with risograph texture",
-          "caption": "Two-color risograph print with intentional misregistration"
+          "src": "/Neeman's/11.png",
+          "alt": "Vision and Mission — sustainability impact metrics",
+          "caption": "Vision: quantifiable sustainability impact with 32M+ plastic bottles recycled"
+        },
+        {
+          "src": "/Neeman's/18.png",
+          "alt": "Product categories — Sneakers, Casual Wear, Specialty",
+          "caption": "Product range: Wool Joggers (best-seller), Loafers, Eco Flips, Oxfords, and clogs"
+        },
+        {
+          "src": "/Neeman's/19.png",
+          "alt": "Competitor landscape",
+          "caption": "Competitive map: Allbirds and Thaely (direct sustainable), Metro/Bata (retail), Nike/Adidas (global)"
+        },
+        {
+          "src": "/Neeman's/26.png",
+          "alt": "Online and offline behaviour analysis",
+          "caption": "Digital core meets experiential frontier: 1.42M monthly visits and rapid retail expansion"
+        },
+        {
+          "src": "/Neeman's/29.png",
+          "alt": "Case study — 'Are Those Neeman's Shoes?' micro-influencer campaign",
+          "caption": "Guerrilla marketing: micro-influencers shouting the brand name to trigger phone ad algorithms"
+        },
+        {
+          "src": "/Neeman's/30.png",
+          "alt": "Campaign objectives — brand awareness, organic traffic, influencer engagement",
+          "caption": "Campaign goals: brand awareness, organic traffic growth, and consumer engagement"
+        },
+        {
+          "src": "/Neeman's/33.png",
+          "alt": "Gap identified — men-centric sales in a female-dominated market",
+          "caption": "Gap 1: Men's sneakers dominate sales despite women holding 54.36% market share"
+        },
+        {
+          "src": "/Neeman's/34.png",
+          "alt": "Website traffic demographics — age and gender split",
+          "caption": "Demographics: 69.8% male visitors, largest segment aged 25–34"
+        },
+        {
+          "src": "/Neeman's/35.png",
+          "alt": "Organic keyword analysis — 4.4K total keywords",
+          "caption": "SEO footprint: 4.4K keywords with brand terms dominating top organic traffic"
+        },
+        {
+          "src": "/Neeman's/36.png",
+          "alt": "Strategy — women's silhouettes and WFORWOMEN collaboration",
+          "caption": "Strategy: women-specific designs, premium textures, and a brand collaboration concept"
+        },
+        {
+          "src": "/Neeman's/37.png",
+          "alt": "Gap identified — Facebook traffic dominance vs Instagram-native audience",
+          "caption": "Gap 2: Social traffic led by Facebook (52%) despite a core 25–34 Instagram audience"
+        },
+        {
+          "src": "/Neeman's/38.png",
+          "alt": "Strategy — lifestyle content and visual identity",
+          "caption": "Content strategy: education on materials + 'Day in Life with Neeman's' lifestyle narrative"
+        },
+        {
+          "src": "/Neeman's/39.png",
+          "alt": "Poster concept — recycled PET Genie-in-a-bottle",
+          "caption": "Poster idea: each shoe holds ~8 recycled bottles — the Genie lives inside"
+        },
+        {
+          "src": "/Neeman's/40.png",
+          "alt": "Neeman's new logo design for Instagram and retail stores",
+          "caption": "Proposed logo refresh: updated monogram applied to Instagram profile and store signage"
         }
       ],
-      "tags": ["InDesign", "Typography", "Editorial", "Print Design", "Risograph"],
-      "category": "Editorial Design",
-      "year": "2024",
+      "tags": ["Brand Research", "Market Analysis", "D2C Strategy", "Presentation Design", "Competitive Analysis"],
+      "category": "Brand Research",
+      "year": "2025",
+      "featured": true
+    },
+    {
+      "slug": "kantha-craft-research",
+      "title": "Kantha — Craft Research",
+      "shortDescription": "A research study on Kantha embroidery from Birbhum, West Bengal, proposing three design interventions to sustain the craft and empower its artisan community.",
+      "description": "Kantha is a centuries-old embroidery tradition from the Birbhum district of West Bengal, practised almost exclusively by women from Scheduled Caste communities in the Bolpur cluster. This research project examined the craft end-to-end — from the laterite landscape of Birbhum to the motifs (Maachh, Padma, Mayur, Mandir), the five-step production process (Design, Printing, Embroidery, Stitching, Finishing), the cluster structure, and the full value chain from raw material procurement through to boutique and export retail.\n\nSocio-cultural research revealed that market pressures have pushed designs toward commercial aesthetics, eroding traditional patterns. The stakeholder map spans master artisans, local micro-entrepreneurs, wholesalers, boutique owners, and NIFT researchers — each playing a distinct role in the craft's survival.\n\nThree interventions were proposed. The Artisan Saarthi Portal is a Bengali-language mobile platform connecting artisans to Aadhaar-linked Artisan Cards, government welfare schemes, and a co-operative finder — with billboard and digital promotion planned for the Bolpur cluster. Co-operative Development addresses collective bargaining, with phased skill modules in marketing, photography, and entrepreneurship. The third intervention, a NIFT Craft Archive, creates an online research database documenting cluster evolution across campuses, giving future designers a living record to build upon.",
+      "thumbnail": "/Kantha/1.png",
+      "coverImage": "/Kantha/1.png",
+      "images": [
+        {
+          "src": "/Kantha/2.png",
+          "alt": "Birbhum region and West Bengal context",
+          "caption": "Locating Kantha: Birbhum district, Bolpur cluster, and the Kopal River valley"
+        },
+        {
+          "src": "/Kantha/4.png",
+          "alt": "Socio-cultural factors shaping Kantha craft",
+          "caption": "Predominantly female SC community artisans managing craft and household responsibilities"
+        },
+        {
+          "src": "/Kantha/5.png",
+          "alt": "Cluster structure — design, business, and artisan roles",
+          "caption": "Cluster structure: Mr. Monirul Haque (designs), Mrs. Pratibha Hazra (business), and artisan groups"
+        },
+        {
+          "src": "/Kantha/7.png",
+          "alt": "Tools and equipment used in Kantha production",
+          "caption": "Tools of the craft: kerosene-silver pigment, tracing paper, needle, threads, embroidery frame"
+        },
+        {
+          "src": "/Kantha/8.png",
+          "alt": "Traditional motifs — Maachh, Padma, Mayur, Mandir",
+          "caption": "Four core motifs: fish (prosperity), lotus (purity), peacock (elegance), temple (devotion)"
+        },
+        {
+          "src": "/Kantha/9.png",
+          "alt": "Production process — Steps 1 and 2: Design and Printing",
+          "caption": "Steps 1–2: motif sketching on paper, tracing onto fabric via pricked-hole pigment transfer"
+        },
+        {
+          "src": "/Kantha/10.png",
+          "alt": "Production process — Steps 3, 4 and 5: Embroidery, Stitching, Finishing",
+          "caption": "Steps 3–5: running stitch embroidery, tailoring into garments, steam finishing and labelling"
+        },
+        {
+          "src": "/Kantha/13.png",
+          "alt": "Value chain — from raw materials to retail",
+          "caption": "Full value chain: raw procurement → designing → embroidery → sampling → production → finishing"
+        },
+        {
+          "src": "/Kantha/14.png",
+          "alt": "Stakeholders — creators, retailers, wholesalers, boutiques, researchers",
+          "caption": "Stakeholder map: master artisans, local retailers, export wholesalers, boutique owners, NIFT"
+        },
+        {
+          "src": "/Kantha/23.png",
+          "alt": "Intervention 1 — Artisan Saarthi Portal app screens",
+          "caption": "Artisan Saarthi: Bengali-language portal for Artisan Card registration and welfare access"
+        },
+        {
+          "src": "/Kantha/24.png",
+          "alt": "Billboard promotions for Artisan Saarthi Portal",
+          "caption": "Localized Bengali billboard campaign promoting portal adoption in the Bolpur cluster"
+        },
+        {
+          "src": "/Kantha/25.png",
+          "alt": "Intervention 2 — Co-operative Development",
+          "caption": "Co-operative Development: management, marketing, and entrepreneurship training for artisans"
+        },
+        {
+          "src": "/Kantha/26.png",
+          "alt": "Intervention 3 — The NIFT Craft Archive concept",
+          "caption": "Craft Archive: an online NIFT database mapping craft clusters and design interventions over time"
+        },
+        {
+          "src": "/Kantha/27.png",
+          "alt": "Craft Archive website mockup",
+          "caption": "Archive mockup showing Kantha, Batik, Phad Painting, Madhubani, and other craft clusters"
+        },
+        {
+          "src": "/Kantha/28.png",
+          "alt": "Feasibility and resource requirements",
+          "caption": "Feasibility: Bhashini for dialect support, shared digital kiosks, AHVY/CSR funding pathways"
+        },
+        {
+          "src": "/Kantha/29.png",
+          "alt": "Implementation Plan — Phases 1 and 2",
+          "caption": "Phases 1–2: language-first UI build, Aadhaar onboarding, billboard launch, system integration"
+        },
+        {
+          "src": "/Kantha/30.png",
+          "alt": "Implementation Plan — Phases 3 and 4",
+          "caption": "Phases 3–4: in-person skill seminars, peer networking, artisan directory for export buyers"
+        },
+        {
+          "src": "/Kantha/31.png",
+          "alt": "System development — 8-step artisan journey",
+          "caption": "System journey: Artisan Card → government network → co-operative → research archive"
+        }
+      ],
+      "tags": ["Design Research", "Craft Studies", "Social Design", "Sustainability", "Field Research", "Service Design"],
+      "category": "Design Research",
+      "year": "2025",
       "featured": true
     }
   ]

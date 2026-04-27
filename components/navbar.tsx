@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { href: "/", label: "Work" },
@@ -11,7 +14,7 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled]     = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -21,89 +24,79 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border"
-          : "bg-transparent border-b border-transparent"
-      }`}
-    >
-      <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link
-          href="/"
-          className="text-xs font-mono tracking-[0.2em] uppercase text-foreground hover:text-accent transition-colors duration-300"
-        >
-          Nilanjana
-        </Link>
+    <header className="sticky top-0 z-50 px-3 sm:px-4 py-2.5 sm:py-3 pointer-events-none">
+      <div className="max-w-5xl mx-auto pointer-events-auto">
 
-        {/* Desktop nav */}
-        <ul className="hidden sm:flex items-center gap-8">
-          {NAV_LINKS.map(({ href, label }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                className={`relative text-sm transition-colors duration-300 after:absolute after:bottom-[-2px] after:left-0 after:h-px after:bg-accent after:transition-all after:duration-300 ${
-                  pathname === href
-                    ? "text-foreground after:w-full"
-                    : "text-muted hover:text-foreground after:w-0 hover:after:w-full"
-                }`}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {/* Floating glass pill */}
+        <nav className={cn(
+          "rounded-full px-5 sm:px-6 h-12 flex items-center justify-between transition-all duration-500",
+          scrolled ? "glass-strong" : "glass"
+        )}>
+          <Link
+            href="/"
+            className="text-xs font-mono tracking-[0.2em] uppercase text-foreground hover:text-accent transition-colors duration-300"
+          >
+            Nilanjana
+          </Link>
 
-        {/* Mobile hamburger */}
-        <button
-          className="sm:hidden text-muted hover:text-foreground transition-colors p-1"
-          onClick={() => setMobileOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? (
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path
-                d="M4 4L16 16M16 4L4 16"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-            </svg>
-          ) : (
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path
-                d="M3 6h14M3 10h14M3 14h14"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-            </svg>
-          )}
-        </button>
-      </nav>
-
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="sm:hidden border-t border-border bg-background/98 backdrop-blur-md">
-          <ul className="max-w-5xl mx-auto px-6 py-6 flex flex-col gap-5">
+          {/* Desktop links */}
+          <ul className="hidden sm:flex items-center gap-8">
             {NAV_LINKS.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
-                  onClick={() => setMobileOpen(false)}
-                  className={`text-sm transition-colors ${
+                  className={cn(
+                    "relative text-sm transition-colors duration-300",
+                    "after:absolute after:bottom-[-2px] after:left-0 after:h-px after:bg-accent after:transition-all after:duration-300",
                     pathname === href
-                      ? "text-foreground font-medium"
-                      : "text-muted hover:text-foreground"
-                  }`}
+                      ? "text-foreground after:w-full"
+                      : "text-muted hover:text-foreground after:w-0 hover:after:w-full"
+                  )}
                 >
                   {label}
                 </Link>
               </li>
             ))}
           </ul>
-        </div>
-      )}
+
+          {/* Mobile toggle — 44px touch target */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="sm:hidden h-11 w-11"
+            onClick={() => setMobileOpen((v) => !v)}
+            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={18} /> : <Menu size={18} />}
+          </Button>
+        </nav>
+
+        {/* Mobile drawer */}
+        {mobileOpen && (
+          <div className="sm:hidden mt-2 glass rounded-2xl overflow-hidden">
+            <ul className="px-5 py-3 flex flex-col">
+              {NAV_LINKS.map(({ href, label }) => (
+                <li key={href}>
+                  {/* min-h-[44px] ensures tap target meets accessibility guidelines */}
+                  <Link
+                    href={href}
+                    onClick={() => setMobileOpen(false)}
+                    className={cn(
+                      "flex items-center min-h-[44px] text-sm transition-colors",
+                      pathname === href
+                        ? "text-foreground font-medium"
+                        : "text-muted hover:text-foreground"
+                    )}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </header>
   );
 }
