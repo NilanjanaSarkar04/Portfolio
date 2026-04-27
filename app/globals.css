@@ -10,75 +10,71 @@
 /* ── Light mode ──────────────────────────────────────────── */
 :root {
   /* Colours */
-  --background:    #f4f3ff;
-  --surface:       rgba(255, 255, 255, 0.55);
+  --background: #f4f3ff;
+  --surface: rgba(255, 255, 255, 0.55);
   --surface-hover: rgba(255, 255, 255, 0.75);
-  --foreground:    #0d0c0b;
-  --accent:        #c44b32;
-  --accent-hover:  #d4654e;
-  --muted:         #6b6560;
-  --border:        rgba(255, 255, 255, 0.65);
+  --foreground: #0d0c0b;
+  --accent: #c44b32;
+  --accent-hover: #d4654e;
+  --muted: #6b6560;
+  --border: rgba(255, 255, 255, 0.65);
   --border-subtle: rgba(0, 0, 0, 0.07);
-  --tag-bg:        rgba(255, 255, 255, 0.5);
-  --tag-text:      #57534e;
+  --tag-bg: rgba(255, 255, 255, 0.5);
+  --tag-text: #57534e;
 
   /* Border radius scale */
-  --radius-sm:   0.5rem;   /* 8px  */
-  --radius-md:   0.75rem;  /* 12px */
-  --radius-lg:   1rem;     /* 16px */
-  --radius-xl:   1.25rem;  /* 20px */
-  --radius-2xl:  1.5rem;   /* 24px */
+  --radius-sm: 0.5rem; /* 8px  */
+  --radius-md: 0.75rem; /* 12px */
+  --radius-lg: 1rem; /* 16px */
+  --radius-xl: 1.25rem; /* 20px */
+  --radius-2xl: 1.5rem; /* 24px */
   --radius-full: 9999px;
 
   /* Glass system — liquid-glass surfaces */
-  --glass-bg:        rgba(255, 255, 255, 0.52);
-  --glass-bg-strong: rgba(255, 255, 255, 0.70);
-  --glass-border:    rgba(255, 255, 255, 0.72);
+  --glass-bg: rgba(255, 255, 255, 0.52);
+  --glass-bg-strong: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.72);
   --glass-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.06),
-    0 1px 3px  rgba(0, 0, 0, 0.04),
+    0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04),
     inset 0 1px 0 rgba(255, 255, 255, 0.92);
   --glass-shadow-lg:
-    0 8px 40px rgba(0, 0, 0, 0.08),
-    0 2px 8px  rgba(0, 0, 0, 0.05),
+    0 8px 40px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.92);
 
-  /* Ambient colour orbs — appear behind glass panels */
-  --orb-coral:  rgba(196, 75, 50, 0.16);
-  --orb-violet: rgba(139, 92, 246, 0.11);
-  --orb-teal:   rgba(20, 184, 166, 0.09);
+  /* Ambient colour orbs — spread across the colour wheel */
+  --orb-coral: rgba(196, 75, 50, 0.2); /* ~15°  terracotta — accent anchor        */
+  --orb-periwinkle: rgba(110, 105, 220, 0.13); /* ~245° periwinkle — echoes lavender bg   */
+  --orb-sage: rgba(70, 158, 135, 0.1); /* ~170° sage teal  — split-complement     */
 }
 
 /* ── Dark mode ───────────────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background:    #07070f;
-    --surface:       rgba(255, 255, 255, 0.05);
+    --background: #07070f;
+    --surface: rgba(255, 255, 255, 0.05);
     --surface-hover: rgba(255, 255, 255, 0.08);
-    --foreground:    #f0ece6;
-    --accent:        #d4654e;
-    --accent-hover:  #e07560;
-    --muted:         #6b6560;
-    --border:        rgba(255, 255, 255, 0.09);
+    --foreground: #f0ece6;
+    --accent: #d4654e;
+    --accent-hover: #e07560;
+    --muted: #6b6560;
+    --border: rgba(255, 255, 255, 0.09);
     --border-subtle: rgba(255, 255, 255, 0.06);
-    --tag-bg:        rgba(255, 255, 255, 0.07);
-    --tag-text:      #a09890;
+    --tag-bg: rgba(255, 255, 255, 0.07);
+    --tag-text: #a09890;
 
-    --glass-bg:        rgba(14, 12, 24, 0.55);
+    --glass-bg: rgba(14, 12, 24, 0.55);
     --glass-bg-strong: rgba(14, 12, 24, 0.72);
-    --glass-border:    rgba(255, 255, 255, 0.10);
+    --glass-border: rgba(255, 255, 255, 0.1);
     --glass-shadow:
-      0 4px 24px rgba(0, 0, 0, 0.45),
-      0 1px 3px  rgba(0, 0, 0, 0.35),
+      0 4px 24px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.35),
       inset 0 1px 0 rgba(255, 255, 255, 0.07);
     --glass-shadow-lg:
-      0 8px 40px rgba(0, 0, 0, 0.55),
-      0 2px 8px  rgba(0, 0, 0, 0.35),
+      0 8px 40px rgba(0, 0, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.35),
       inset 0 1px 0 rgba(255, 255, 255, 0.07);
 
-    --orb-coral:  rgba(212, 101, 78, 0.22);
-    --orb-violet: rgba(139, 92, 246, 0.16);
-    --orb-teal:   rgba(20, 184, 166, 0.12);
+    --orb-coral: rgba(212, 101, 78, 0.28);
+    --orb-periwinkle: rgba(120, 115, 230, 0.18);
+    --orb-sage: rgba(70, 158, 135, 0.15);
   }
 }
 
@@ -90,55 +86,90 @@
 @theme inline {
   --breakpoint-xs: 22.5rem; /* 360px — smallest modern phones → xs: prefix */
   /* Colours */
-  --color-background:    var(--background);
-  --color-surface:       var(--surface);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-surface-hover: var(--surface-hover);
-  --color-foreground:    var(--foreground);
-  --color-accent:        var(--accent);
-  --color-accent-hover:  var(--accent-hover);
-  --color-muted:         var(--muted);
-  --color-border:        var(--border);
-  --color-tag-bg:        var(--tag-bg);
-  --color-tag-text:      var(--tag-text);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-tag-bg: var(--tag-bg);
+  --color-tag-text: var(--tag-text);
 
   /* Typography */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
   /* Animations */
-  --animate-fade-up:  fade-up  0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
-  --animate-fade-in:  fade-in  0.5s ease-out both;
-  --animate-marquee:  marquee-scroll 35s linear infinite;
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in: fade-in 0.5s ease-out both;
+  --animate-marquee: marquee-scroll 35s linear infinite;
 }
 
 /* ─────────────────────────────────────────────────────────
    KEYFRAMES
    ───────────────────────────────────────────────────────── */
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes marquee-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-@keyframes orb-drift {
-  0%,  100% { transform: translate(0,   0)   scale(1);    }
-  33%        { transform: translate(2%,  3%)  scale(1.04); }
-  66%        { transform: translate(-1%, 2%)  scale(0.97); }
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg) translate(6%, 0) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(6%, 0) rotate(-360deg);
+  }
 }
 
-@keyframes orb-drift-alt {
-  0%,  100% { transform: translate(0,    0)    scale(1);    }
-  40%        { transform: translate(-2%, -3%)  scale(1.03); }
-  75%        { transform: translate(1%,  -1%)  scale(0.98); }
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-8%) translateY(-4%);
+  }
+  50% {
+    transform: translateX(8%) translateY(4%);
+  }
+  100% {
+    transform: translateX(-8%) translateY(-4%);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateX(4%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(-4%) translateY(10%);
+  }
+  100% {
+    transform: translateX(4%) translateY(-10%);
+  }
 }
 
 /* ─────────────────────────────────────────────────────────
@@ -155,38 +186,17 @@ body {
 }
 
 /* Ensure tappable elements have no tap highlight flash */
-a, button {
+a,
+button {
   -webkit-tap-highlight-color: transparent;
 }
 
 /* Prevent text from overflowing narrow viewports */
-p, h1, h2, h3 {
+p,
+h1,
+h2,
+h3 {
   overflow-wrap: break-word;
-}
-
-/* Ambient colour orbs rendered as fixed background layers */
-body::before,
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-}
-
-body::before {
-  background:
-    radial-gradient(ellipse 72% 60% at 12% 18%, var(--orb-coral)  0%, transparent 58%),
-    radial-gradient(ellipse 55% 65% at 86% 82%, var(--orb-violet) 0%, transparent 58%),
-    radial-gradient(ellipse 48% 52% at 62% 38%, var(--orb-teal)   0%, transparent 52%);
-  animation: orb-drift 22s ease-in-out infinite alternate;
-}
-
-body::after {
-  background:
-    radial-gradient(ellipse 42% 48% at 72% 25%, var(--orb-violet) 0%, transparent 52%),
-    radial-gradient(ellipse 55% 42% at 28% 78%, var(--orb-teal)   0%, transparent 52%);
-  animation: orb-drift-alt 17s ease-in-out 4s infinite alternate;
 }
 
 /* ─────────────────────────────────────────────────────────

@@ -11,7 +11,10 @@ interface SectionLabelProps extends React.HTMLAttributes<HTMLParagraphElement> {
  */
 export function SectionLabel({ children, className, ...props }: SectionLabelProps) {
   return (
-    <p className={cn("text-xs font-mono tracking-[0.2em] uppercase text-accent", className)} {...props}>
+    <p
+      className={cn("text-accent font-mono text-xs tracking-[0.2em] uppercase", className)}
+      {...props}
+    >
       {children}
     </p>
   );

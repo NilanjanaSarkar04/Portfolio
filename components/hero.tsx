@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SectionLabel } from "@/components/ui/section-label";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface HeroProps {
   name: string;
@@ -14,7 +14,7 @@ interface HeroProps {
 export default function Hero({ name, tagline, bio }: HeroProps) {
   return (
     /* svh = small viewport height — excludes mobile browser chrome */
-    <section className="relative min-h-svh sm:min-h-[92vh] flex items-center overflow-hidden">
+    <section className="relative flex min-h-svh items-center overflow-hidden sm:min-h-[92vh]">
       {/* Aceternity SparklesCore */}
       <SparklesCore
         particleColor="var(--accent)"
@@ -26,26 +26,22 @@ export default function Hero({ name, tagline, bio }: HeroProps) {
       {/* Decorative number — texture layer, hidden on smallest screens */}
       <span
         aria-hidden
-        className="pointer-events-none select-none absolute right-0 top-0 font-mono font-bold leading-none text-foreground hidden xs:block"
+        className="text-foreground xs:block pointer-events-none absolute top-0 right-0 hidden font-mono leading-none font-bold select-none"
         style={{ fontSize: "clamp(10rem, 28vw, 26rem)", opacity: 0.022, lineHeight: 1 }}
       >
         01
       </span>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto w-full px-5 sm:px-6 pt-16 pb-20 sm:py-24">
-
+      <div className="relative z-10 mx-auto w-full max-w-5xl px-5 pt-16 pb-20 sm:px-6 sm:py-24">
         {/* Level 3 — eyebrow */}
-        <SectionLabel
-          className="mb-4 sm:mb-6 animate-fade-up"
-          style={{ animationDelay: "0ms" }}
-        >
+        <SectionLabel className="animate-fade-up mb-4 sm:mb-6" style={{ animationDelay: "0ms" }}>
           {tagline}
         </SectionLabel>
 
         {/* Level 1 — dominant name; clamp min lowered so it fits on 360px screens */}
         <h1
-          className="font-medium tracking-tight text-foreground leading-[0.9] mb-7 sm:mb-10 animate-fade-up"
+          className="text-foreground animate-fade-up mb-7 leading-[0.9] font-medium tracking-tight sm:mb-10"
           style={{
             fontSize: "clamp(3.25rem, 12vw, 10rem)",
             animationDelay: "120ms",
@@ -55,11 +51,8 @@ export default function Hero({ name, tagline, bio }: HeroProps) {
         </h1>
 
         {/* Level 2 — glass card */}
-        <Card
-          className="p-5 sm:p-8 max-w-xl animate-fade-up"
-          style={{ animationDelay: "280ms" }}
-        >
-          <p className="text-sm sm:text-base text-muted leading-relaxed mb-6 sm:mb-8">
+        <Card className="animate-fade-up max-w-xl p-5 sm:p-8" style={{ animationDelay: "280ms" }}>
+          <p className="text-muted mb-6 text-sm leading-relaxed sm:mb-8 sm:text-base">
             {bio.split("\n\n")[0]}
           </p>
 
@@ -81,13 +74,11 @@ export default function Hero({ name, tagline, bio }: HeroProps) {
 
         {/* Scroll indicator — sits at the bottom of the viewport */}
         <div
-          className="absolute bottom-6 sm:bottom-10 left-5 sm:left-6 flex items-center gap-3 animate-fade-in"
+          className="animate-fade-in absolute bottom-6 left-5 flex items-center gap-3 sm:bottom-10 sm:left-6"
           style={{ animationDelay: "900ms" }}
         >
-          <div className="w-8 h-px" style={{ background: "var(--glass-border)" }} />
-          <span className="text-xs font-mono tracking-[0.15em] uppercase text-muted">
-            Scroll
-          </span>
+          <div className="h-px w-8" style={{ background: "var(--glass-border)" }} />
+          <span className="text-muted font-mono text-xs tracking-[0.15em] uppercase">Scroll</span>
         </div>
       </div>
     </section>

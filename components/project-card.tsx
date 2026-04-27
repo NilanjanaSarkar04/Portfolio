@@ -1,9 +1,9 @@
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { Badge } from "@/components/ui/badge";
+import type { Project } from "@/lib/types";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { BackgroundGradient } from "@/components/ui/background-gradient";
-import type { Project } from "@/lib/types";
 
 interface ProjectCardProps {
   project: Project;
@@ -15,11 +15,11 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
     <BackgroundGradient containerClassName="h-full">
       <Link
         href={`/projects/${project.slug}`}
-        className="group relative block overflow-hidden rounded-2xl glass h-full transition-all duration-500"
+        className="group glass relative block h-full overflow-hidden rounded-2xl transition-all duration-500"
         style={{ animationDelay: `${index * 120}ms` }}
       >
         {/* Image */}
-        <div className="aspect-[16/10] overflow-hidden relative">
+        <div className="relative aspect-[16/10] overflow-hidden">
           <Image
             src={project.thumbnail}
             alt={project.title}
@@ -37,7 +37,7 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           </div>
 
           {/* Year */}
-          <span className="absolute top-4 right-4 text-[10px] font-mono text-white/50">
+          <span className="absolute top-4 right-4 font-mono text-[10px] text-white/50">
             {project.year}
           </span>
 
@@ -47,26 +47,26 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             to the bottom; description + CTA above it are clipped until
             the panel grows tall enough to reveal them.
           */}
-          <div className="absolute inset-x-0 bottom-0 overflow-hidden flex flex-col justify-end px-5 pb-5 h-[3.75rem] group-hover:h-[8rem] transition-[height] duration-500 ease-out">
+          <div className="absolute inset-x-0 bottom-0 flex h-[3.75rem] flex-col justify-end overflow-hidden px-5 pb-5 transition-[height] duration-500 ease-out group-hover:h-[8rem]">
             {/* CTA — topmost, first to be clipped when collapsed */}
-            <span className="inline-flex items-center gap-1.5 text-xs font-mono tracking-widest uppercase text-accent mb-2 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+            <span className="text-accent mb-2 inline-flex shrink-0 items-center gap-1.5 font-mono text-xs tracking-widest uppercase opacity-0 transition-opacity delay-200 duration-300 group-hover:opacity-100">
               View Project
               <ArrowUpRight size={10} />
             </span>
 
             {/* Description */}
-            <p className="text-xs text-white/70 leading-relaxed line-clamp-2 mb-2.5 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+            <p className="mb-2.5 line-clamp-2 shrink-0 text-xs leading-relaxed text-white/70 opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">
               {project.shortDescription}
             </p>
 
             {/* Title — always visible, anchored at bottom */}
-            <h3 className="text-base font-medium text-white leading-snug shrink-0">
+            <h3 className="shrink-0 text-base leading-snug font-medium text-white">
               {project.title}
             </h3>
           </div>
 
           {/* Accent top-edge on hover */}
-          <div className="absolute inset-x-0 top-0 h-px bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left" />
+          <div className="bg-accent absolute inset-x-0 top-0 h-px origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100" />
         </div>
       </Link>
     </BackgroundGradient>

@@ -4,8 +4,8 @@
  * Aceternity UI — SparklesCore
  * Canvas-based twinkling particle field. Replaces @tsparticles.
  */
-import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
+import { useEffect, useRef } from "react";
 
 interface Particle {
   x: number;
@@ -72,8 +72,14 @@ export function SparklesCore({
 
       for (const p of particles) {
         p.alpha += p.delta;
-        if (p.alpha <= 0) { p.alpha = 0; p.delta *= -1; }
-        if (p.alpha >= 1) { p.alpha = 1; p.delta *= -1; }
+        if (p.alpha <= 0) {
+          p.alpha = 0;
+          p.delta *= -1;
+        }
+        if (p.alpha >= 1) {
+          p.alpha = 1;
+          p.delta *= -1;
+        }
 
         ctx.save();
         ctx.globalAlpha = p.alpha * 0.65;
@@ -103,7 +109,7 @@ export function SparklesCore({
     <canvas
       ref={canvasRef}
       style={{ background }}
-      className={cn("absolute inset-0 w-full h-full", className)}
+      className={cn("absolute inset-0 h-full w-full", className)}
     />
   );
 }

@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import { ArrowUpRight, Download } from "lucide-react";
-import { getProfile } from "@/lib/data";
-import { Button } from "@/components/ui/button";
+import AnimateIn from "@/components/animate-in";
+import SocialLink from "@/components/social-link";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardElevated } from "@/components/ui/card";
 import { SectionLabel } from "@/components/ui/section-label";
-import SocialLink from "@/components/social-link";
-import AnimateIn from "@/components/animate-in";
+import { getProfile } from "@/lib/data";
+import { ArrowUpRight, Download } from "lucide-react";
+import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Profile | Nilanjana",
@@ -19,15 +19,14 @@ export default function ProfilePage() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="max-w-4xl mx-auto px-5 sm:px-6 py-10 sm:py-16">
-
+    <div className="mx-auto max-w-4xl px-5 py-10 sm:px-6 sm:py-16">
       {/* ── Hero card ── */}
       <AnimateIn className="mb-10 sm:mb-16">
         <CardElevated className="p-5 sm:p-8">
           <SectionLabel className="mb-6 sm:mb-8">About</SectionLabel>
-          <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-10">
-            <div className="shrink-0 p-1.5 rounded-2xl glass">
-              <div className="w-24 h-32 sm:w-36 sm:h-48 rounded-xl overflow-hidden bg-surface relative">
+          <div className="flex flex-col items-start gap-6 sm:flex-row sm:gap-10">
+            <div className="glass shrink-0 rounded-2xl p-1.5">
+              <div className="bg-surface relative h-32 w-24 overflow-hidden rounded-xl sm:h-48 sm:w-36">
                 <Image
                   src={profile.profileImage}
                   alt={profile.name}
@@ -39,19 +38,19 @@ export default function ProfilePage() {
             </div>
             <div className="flex-1">
               <h1
-                className="font-medium tracking-tight text-foreground mb-2 sm:mb-3 leading-tight"
+                className="text-foreground mb-2 leading-tight font-medium tracking-tight sm:mb-3"
                 style={{ fontSize: "clamp(2rem, 6vw, 4rem)" }}
               >
                 {profile.name}
               </h1>
-              <p className="text-xs font-mono tracking-[0.15em] uppercase text-muted mb-4 sm:mb-6">
+              <p className="text-muted mb-4 font-mono text-xs tracking-[0.15em] uppercase sm:mb-6">
                 {profile.tagline}
               </p>
-              <div className="flex flex-col gap-1.5 mb-4 sm:mb-6">
-                <p className="text-sm text-muted">{profile.location}</p>
+              <div className="mb-4 flex flex-col gap-1.5 sm:mb-6">
+                <p className="text-muted text-sm">{profile.location}</p>
                 <a
                   href={`mailto:${profile.email}`}
-                  className="text-sm text-accent hover:text-accent-hover transition-colors break-all"
+                  className="text-accent hover:text-accent-hover text-sm break-all transition-colors"
                 >
                   {profile.email}
                 </a>
@@ -71,7 +70,9 @@ export default function ProfilePage() {
         <SectionLabel className="mb-4 sm:mb-6">Background</SectionLabel>
         <div className="max-w-2xl space-y-4 sm:space-y-5">
           {profile.bio.split("\n\n").map((para, i) => (
-            <p key={i} className="text-sm sm:text-base text-foreground leading-relaxed">{para}</p>
+            <p key={i} className="text-foreground text-sm leading-relaxed sm:text-base">
+              {para}
+            </p>
           ))}
         </div>
       </AnimateIn>
@@ -90,24 +91,23 @@ export default function ProfilePage() {
             return (
               <AnimateIn key={i} delay={i * 100}>
                 <div className="flex gap-4 sm:gap-6">
-
                   {/* ── Spine column: dot + connector ── */}
-                  <div className="flex flex-col items-center shrink-0 w-6 sm:w-8">
+                  <div className="flex w-6 shrink-0 flex-col items-center sm:w-8">
                     {isCurrent ? (
                       /* Pulsing accent dot for current entry */
                       <div className="relative mt-1.5 shrink-0">
-                        <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-25" />
-                        <span className="relative flex w-4 h-4 rounded-full bg-accent ring-[3px] ring-background" />
+                        <span className="bg-accent absolute inset-0 animate-ping rounded-full opacity-25" />
+                        <span className="bg-accent ring-background relative flex h-4 w-4 rounded-full ring-[3px]" />
                       </div>
                     ) : (
                       /* Static hollow dot for past entries */
-                      <div className="mt-2 w-3 h-3 rounded-full shrink-0 border-2 border-muted bg-background" />
+                      <div className="border-muted bg-background mt-2 h-3 w-3 shrink-0 rounded-full border-2" />
                     )}
 
                     {/* Connector line to next entry */}
                     {!isLast && (
                       <div
-                        className="mt-2 w-px grow min-h-[2rem]"
+                        className="mt-2 min-h-[2rem] w-px grow"
                         style={{
                           background: "linear-gradient(to bottom, var(--muted), transparent)",
                           opacity: 0.25,
@@ -118,32 +118,28 @@ export default function ProfilePage() {
 
                   {/* ── Content column ── */}
                   <div className={`flex-1 ${isLast ? "pb-0" : "pb-8 sm:pb-10"}`}>
-                    <div className="flex items-start justify-between gap-3 mb-1.5">
-                      <h3 className="text-sm sm:text-base font-medium text-foreground leading-snug">
+                    <div className="mb-1.5 flex items-start justify-between gap-3">
+                      <h3 className="text-foreground text-sm leading-snug font-medium sm:text-base">
                         {edu.institution}
                       </h3>
-                      <Badge
-                        variant={isCurrent ? "accent" : "outline"}
-                        className="shrink-0 mt-0.5"
-                      >
+                      <Badge variant={isCurrent ? "accent" : "outline"} className="mt-0.5 shrink-0">
                         {isCurrent ? "Current" : edu.endYear}
                       </Badge>
                     </div>
 
-                    <p className="text-sm text-accent mb-1">
+                    <p className="text-accent mb-1 text-sm">
                       {edu.degree} · {edu.field}
                     </p>
-                    <p className="text-xs font-mono text-muted mb-3">
+                    <p className="text-muted mb-3 font-mono text-xs">
                       {edu.startYear} — {edu.endYear}
                     </p>
 
                     {edu.description && (
-                      <p className="text-xs sm:text-sm text-muted leading-relaxed">
+                      <p className="text-muted text-xs leading-relaxed sm:text-sm">
                         {edu.description}
                       </p>
                     )}
                   </div>
-
                 </div>
               </AnimateIn>
             );
@@ -155,7 +151,7 @@ export default function ProfilePage() {
       <AnimateIn>
         <Card className="p-5 sm:p-6">
           <SectionLabel className="mb-3">Resume</SectionLabel>
-          <p className="text-xs sm:text-sm text-muted leading-relaxed mb-5">
+          <p className="text-muted mb-5 text-xs leading-relaxed sm:text-sm">
             Available for internships and freelance projects starting 2025.
           </p>
           <div className="flex flex-wrap gap-3">
@@ -178,7 +174,6 @@ export default function ProfilePage() {
           </div>
         </Card>
       </AnimateIn>
-
     </div>
   );
 }

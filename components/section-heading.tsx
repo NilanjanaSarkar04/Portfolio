@@ -12,13 +12,11 @@ export default function SectionHeading({ title, subtitle, index, className }: Se
   return (
     <AnimateIn className={cn("mb-12 flex items-baseline gap-5", className)}>
       {index && (
-        <span className="text-xs font-mono text-accent tracking-widest shrink-0">
-          {index}
-        </span>
+        <span className="text-accent shrink-0 font-mono text-xs tracking-widest">{index}</span>
       )}
       <div>
-        <h2 className="text-2xl font-medium tracking-tight text-foreground">{title}</h2>
-        {subtitle && <p className="mt-2 text-sm text-muted">{subtitle}</p>}
+        <h2 className="text-foreground text-2xl font-medium tracking-tight">{title}</h2>
+        {subtitle && <p className="text-muted mt-2 text-sm">{subtitle}</p>}
       </div>
     </AnimateIn>
   );

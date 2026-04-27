@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
   { href: "/", label: "Work" },
@@ -14,7 +14,7 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled]     = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -24,30 +24,31 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 px-3 sm:px-4 py-2.5 sm:py-3 pointer-events-none">
-      <div className="max-w-5xl mx-auto pointer-events-auto">
-
+    <header className="pointer-events-none sticky top-0 z-50 px-3 py-2.5 sm:px-4 sm:py-3">
+      <div className="pointer-events-auto mx-auto max-w-5xl">
         {/* Floating glass pill */}
-        <nav className={cn(
-          "rounded-full px-5 sm:px-6 h-12 flex items-center justify-between transition-all duration-500",
-          scrolled ? "glass-strong" : "glass"
-        )}>
+        <nav
+          className={cn(
+            "flex h-12 items-center justify-between rounded-full px-5 transition-all duration-500 sm:px-6",
+            scrolled ? "glass-strong" : "glass"
+          )}
+        >
           <Link
             href="/"
-            className="text-xs font-mono tracking-[0.2em] uppercase text-foreground hover:text-accent transition-colors duration-300"
+            className="text-foreground hover:text-accent font-mono text-xs tracking-[0.2em] uppercase transition-colors duration-300"
           >
             Nilanjana
           </Link>
 
           {/* Desktop links */}
-          <ul className="hidden sm:flex items-center gap-8">
+          <ul className="hidden items-center gap-8 sm:flex">
             {NAV_LINKS.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
                   className={cn(
                     "relative text-sm transition-colors duration-300",
-                    "after:absolute after:bottom-[-2px] after:left-0 after:h-px after:bg-accent after:transition-all after:duration-300",
+                    "after:bg-accent after:absolute after:bottom-[-2px] after:left-0 after:h-px after:transition-all after:duration-300",
                     pathname === href
                       ? "text-foreground after:w-full"
                       : "text-muted hover:text-foreground after:w-0 hover:after:w-full"
@@ -63,7 +64,7 @@ export default function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className="sm:hidden h-11 w-11"
+            className="h-11 w-11 sm:hidden"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
@@ -74,8 +75,8 @@ export default function Navbar() {
 
         {/* Mobile drawer */}
         {mobileOpen && (
-          <div className="sm:hidden mt-2 glass rounded-2xl overflow-hidden">
-            <ul className="px-5 py-3 flex flex-col">
+          <div className="glass mt-2 overflow-hidden rounded-2xl sm:hidden">
+            <ul className="flex flex-col px-5 py-3">
               {NAV_LINKS.map(({ href, label }) => (
                 <li key={href}>
                   {/* min-h-[44px] ensures tap target meets accessibility guidelines */}
@@ -83,7 +84,7 @@ export default function Navbar() {
                     href={href}
                     onClick={() => setMobileOpen(false)}
                     className={cn(
-                      "flex items-center min-h-[44px] text-sm transition-colors",
+                      "flex min-h-[44px] items-center text-sm transition-colors",
                       pathname === href
                         ? "text-foreground font-medium"
                         : "text-muted hover:text-foreground"

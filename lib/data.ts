@@ -1,14 +1,10 @@
 import portfolioData from "@/data/portfolio.json";
-import type { PortfolioData, Project, Profile, SiteMetadata } from "./types";
+import type { PortfolioData, Profile, Project } from "./types";
 
 const data = portfolioData as PortfolioData;
 
 export function getProjects(): Project[] {
   return data.projects;
-}
-
-export function getFeaturedProjects(): Project[] {
-  return data.projects.filter((p) => p.featured);
 }
 
 export function getProjectBySlug(slug: string): Project | undefined {
@@ -21,8 +17,4 @@ export function getAllProjectSlugs(): string[] {
 
 export function getProfile(): Profile {
   return data.profile;
-}
-
-export function getSiteMetadata(): SiteMetadata {
-  return data.metadata;
 }

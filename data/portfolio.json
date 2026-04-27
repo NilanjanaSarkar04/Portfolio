@@ -7,25 +7,25 @@
   "profile": {
     "name": "Nilanjana",
     "tagline": "Design Student & Visual Storyteller",
-    "bio": "I'm a design student passionate about creating meaningful visual experiences that sit at the intersection of aesthetics and function. My work spans UI/UX design, brand identity, and visual communication — driven by a belief that great design should feel effortless.\n\nI'm currently pursuing my degree in Communication Design, where I've developed a strong foundation in design thinking, typography, and human-centered design. I'm always exploring new ways to push creative boundaries while keeping the user at the center of every decision.",
+    "bio": "I believe design is a powerful medium for storytelling and communication. Design has the ability to shape how people interpret ideas, narratives, and information.\n\nMy path to design began through language — a background in English Literature taught me to think in structure, voice, and meaning before I ever picked up a design tool. That foundation shapes everything I make: I approach visual problems the way a writer approaches a page, asking what needs to be said, for whom, and what feeling it should leave behind.\n\nI'm currently pursuing a Master of Design at NIFT, where I work at the intersection of communication design, craft research, and human-centered systems. My projects range from UX redesigns and brand strategy to field research with artisan communities — connected by a belief that the best design is both rigorous and deeply human.",
     "profileImage": "/images/profile/headshot.svg",
-    "email": "hello@nilanjana.design",
+    "email": "nilanjanasarkar75@gmail.com",
     "location": "New Delhi, India",
     "resumeUrl": "/resume.pdf",
     "socialLinks": [
       {
         "platform": "linkedin",
-        "url": "https://linkedin.com/in/nilanjana",
+        "url": "https://www.linkedin.com/in/nilanjana-sarkar-51581720a/",
         "label": "LinkedIn"
       },
       {
         "platform": "behance",
-        "url": "https://behance.net/nilanjana",
+        "url": "https://www.behance.net/nilanjanasarkar/",
         "label": "Behance"
       },
       {
         "platform": "instagram",
-        "url": "https://instagram.com/nilanjana.design",
+        "url": "https://www.instagram.com/_w.a.b.i_s.a.b.i/",
         "label": "Instagram"
       }
     ],
@@ -131,7 +131,7 @@
           "caption": "New palette: Lavender Grey for calm daily use, Dark Ash for contrast and depth"
         }
       ],
-      "tags": ["Figma", "UI/UX", "Mobile Design", "User Research", "Information Architecture", "Wireframing"],
+      "tags": ["Figma", "Illustrator", "Canva"],
       "category": "UI/UX Design",
       "year": "2025",
       "featured": true
@@ -165,7 +165,7 @@
           "caption": "Complete Delhi guide: landmark itinerary, shopping destinations, and dining areas"
         }
       ],
-      "tags": ["Illustrator", "InDesign", "Print Design", "Typography", "Graphic Design", "Editorial"],
+      "tags": ["Canva"],
       "category": "Print Design",
       "year": "2024",
       "featured": true
@@ -259,7 +259,7 @@
           "caption": "Proposed logo refresh: updated monogram applied to Instagram profile and store signage"
         }
       ],
-      "tags": ["Brand Research", "Market Analysis", "D2C Strategy", "Presentation Design", "Competitive Analysis"],
+      "tags": ["Illustrator", "Canva"],
       "category": "Brand Research",
       "year": "2025",
       "featured": true
@@ -363,7 +363,7 @@
           "caption": "System journey: Artisan Card → government network → co-operative → research archive"
         }
       ],
-      "tags": ["Design Research", "Craft Studies", "Social Design", "Sustainability", "Field Research", "Service Design"],
+      "tags": ["Figma", "Illustrator", "Canva"],
       "category": "Design Research",
       "year": "2025",
       "featured": true
