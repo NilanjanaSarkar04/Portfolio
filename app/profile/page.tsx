@@ -152,11 +152,11 @@ export default function ProfilePage() {
         <Card className="p-5 sm:p-6">
           <SectionLabel className="mb-3">Resume</SectionLabel>
           <p className="text-muted mb-5 text-xs leading-relaxed sm:text-sm">
-            Available for internships and freelance projects starting 2025.
+            Currently pursuing MDes at NIFT. Open to internships, freelance projects, and collaborative work in design research, UI/UX, and visual communication.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button asChild variant="default">
-              <a href={profile.resumeUrl} download>
+              <a href={profile.resumeUrl} target="_blank" rel="noopener noreferrer">
                 <Download size={14} />
                 Download Resume
               </a>
